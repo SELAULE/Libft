@@ -6,21 +6,21 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 11:47:21 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/30 09:20:59 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/04 15:16:49 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memccpy(void *dst, const void src, int c, size_t n)
 {
-	char *dest;
-	char *str;
-	unsigned char of_c;
-	int *dptr;
-	int *sptr;
+	char			*dest;
+	char			*str;
+	unsigned char	of_c;
+	int				*dptr;
+	int				*sptr;
 
-	dest = (*(char *)dst);
-	str = (*(char *)src);
-	of_c = (*(unsigned char *)c);
+	dest = (char*)dst;
+	str = (char*)src;
+	of_c = (unsigned char *)c;
 	dptr = &dest;
 	sptr = &str;
 	while (i < n)

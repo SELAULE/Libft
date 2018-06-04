@@ -6,11 +6,19 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 11:19:25 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/30 11:32:29 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/01 15:02:36 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_strclr(char *s)
 {
-	ft_memset(s, '\0', sizeof(s));
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		s[i++] = '\0';
+	}
 }

@@ -6,25 +6,23 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 10:57:09 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/30 09:03:50 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/02 09:36:23 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-#define ZERO 0;
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	int			i;
 	char		*str;
 
-	i = 0;
-	str = (char *)s;
+	str = (char*)s;
+/*	if (n == 0 || s == NULL)
+		return ;*/
 	while (n > 0)
 	{
-		str[i] = ZERO;
+		str[n] = 0;
 		n--;
-		i++;
 	}
+//	str[n] = 0;
 }

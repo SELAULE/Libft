@@ -6,7 +6,7 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 13:56:50 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/28 17:01:58 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/05/31 17:21:44 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ char	*ft_strcpy(char *dst, const char *src)
 		dst[i] = src[i];
 		i++;
 	}
-	return ((char*)dst);
+	dst[i] = '\0';
+	return (dst);
 }

@@ -6,17 +6,24 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 14:54:20 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/30 16:47:56 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/04 10:11:29 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_striter(char *s, void (*f)(char *))
 {
-	int i;
-	
+	int	i;
+
+	i = 0;
+	if (!s)
+	{
+		return ;
+	}
 	while (s[i] != '\0')
 	{
-		f(s[i]);
+		f(&s[i]);
 		i++;
 	}
 }

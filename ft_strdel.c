@@ -6,14 +6,15 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 09:28:15 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/29 09:31:04 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/01 09:40:24 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_strdel(char **as)
 {
-	if (!as)
-		return (NULL);
-	else
+	if (as != NULL)
 		free(*as);
+	*as = NULL;
 }

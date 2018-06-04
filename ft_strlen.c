@@ -6,13 +6,13 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 10:47:08 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/29 14:03:47 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/04 10:12:03 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		ft_strlen(char *str)
+int		ft_strlen(const char *str)
 {
 	int i;
 

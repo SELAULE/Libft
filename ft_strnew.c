@@ -6,7 +6,7 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 08:54:45 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/30 11:00:30 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/04 17:17:05 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *s;
+	size_t	i;
+	char	*s;
 
-	if (!size)
+	i = 0;
+	if (size == 0)
 		return (NULL);
-	else if (!(s = (char*)malloc(sizeof(size) + 1)))
+	else if (!(s = (char*)malloc(sizeof(char) * size + sizeof(char))))
 		return (NULL);
-	ft_memset(s, '\0', size + 1);
+	while (i <= size)
+		s[i++] = '\0';
 	return (s);
 }

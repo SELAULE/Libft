@@ -6,21 +6,31 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 11:12:33 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/30 10:20:25 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/01 14:45:58 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+static void	ft_long(long n)
 {
-	n = 10;
 	if (n < 0)
-		write(1, "-", 1);
-	return (n *= - 1);
-	if (n < 10)
-
+	{
+		ft_putchar('-');
+		n = n * -1;
+	}
+	if (n >= 10)
+	{
+		ft_long(n / 10);
+		ft_long(n % 10);
+	}
 	else
-		ft_putchar('0' + 10 / n);
-	ft_putchar('0' + 10 % n);
+	{
+		ft_putchar(n + '0');
+	}
+}
+
+void		ft_putnbr(int n)
+{
+	ft_long((long)n);
 }

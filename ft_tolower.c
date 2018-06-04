@@ -6,7 +6,7 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 14:58:17 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/30 11:11:24 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/05/31 17:56:46 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 int		ft_tolower(int c)
 {
-	int result;
+	unsigned char result;
+
 	result = 0;
 	if (c >= 'A' && c <= 'Z')
 		result = c + 32;
+	else
+		return (c);
 	return (result);
 }

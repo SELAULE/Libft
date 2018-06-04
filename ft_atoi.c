@@ -6,7 +6,7 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 12:15:55 by nselaule          #+#    #+#             */
-/*   Updated: 2018/05/28 14:36:03 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/04 11:32:49 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int		ft_atoi(const char *str)
 	j = 0;
 	sign = 1;
 	while (*str == '\t' || *str == ' ' || *str == '\r')
+		str++;
+	while (*str == ' ')
 		str++;
 	if (*str == '-')
 	{
