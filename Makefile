@@ -51,14 +51,15 @@ SRC =	ft_strlen.c		\
 		ft_memcpy.c		\
 		ft_bzero.c		\
 		ft_strequ.c		\
-		ft_strnequ.c	\
 		ft_strmap.c		\
 		ft_strmapi.c	\
 		ft_strcat.c		\
 		ft_strncat.c	\
 		ft_strsub.c		\
 		ft_strjoin.c	\
-		#ft_memccpy.c	\
+		ft_strtrim.c	\
+		#ft_strnequ.c	\
+		ft_memccpy.c	\
 
 OBJ =	ft_strlen.o		\
 		ft_memset.o		\
@@ -94,14 +95,15 @@ OBJ =	ft_strlen.o		\
 		ft_memcpy.o		\
 		ft_bzero.o		\
 		ft_strequ.o		\
-		ft_strnequ.o	\
 		ft_strmap.o		\
 		ft_strmapi.o	\
 		ft_strcat.o		\
 		ft_strncat.o	\
 		ft_strsub.o		\
 		ft_strjoin.o	\
-		#ft_memccpy.o	\
+		ft_strtrim.o	\
+		#ft_strnequ.o	\
+		ft_memccpy.o	\
 
 all:
 	gcc -c $(FLAGS) $(SRC)

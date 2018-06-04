@@ -10,19 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strtrim(char const *s)
 {
 	int	i;
 	int	j;
+	int	k;
 	char *fresh;
 
 	i = 0;
-	while (i = ' ' || '\t' || '\n')
+	while ((s[i] == ' ') || (s[i] == '\t') || (s[i] == '\n'))
 		i++;
 	j = ft_strlen(s) - 1;
-	while (j = ' ' || '\t' || '\n')
+	while ((s[j] == ' ') || (s[j] == '\t') || (s[j] == '\n'))
 		j--;
-	k = (ft_strlen(s) - j + - i)
-	fresh = (char*)malloc(k) + 1;
+	k = (ft_strlen(s) - (j + - i) + 1);
+	fresh = (char*)malloc(sizeof(k) + 1);
+	if (!fresh)
+		return (0);
+	while (s[k] != '\0')
+	{
+		fresh[i] = s[k];
+		k++;
+		i++;
+	}
 	return (fresh);
 }

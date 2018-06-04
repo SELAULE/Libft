@@ -18,17 +18,15 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char *fresh;
 
 	i = 0;
+	fresh = (char*)malloc(sizeof(char) * len);
 	if (!fresh)
 		return (0);
-	fresh = (char*)malloc((char) * len)
 	while (s[start] != '\0')
 	{
-		while (start <= len)
-		{
+		if (start <= len)
 			fresh[i] = s[start];
-			i++;
-			start++;
-		}
-	}	   
-	return (fresh);   
+		i++;
+		start++;
+	}
+	return (fresh);
 }
