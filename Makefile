@@ -6,7 +6,7 @@
 #    By: nselaule <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/28 09:44:43 by nselaule          #+#    #+#              #
-#    Updated: 2018/06/04 17:18:28 by nselaule         ###   ########.fr        #
+#    Updated: 2018/06/05 16:17:55 by nselaule         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ SRC =	ft_strlen.c		\
 		ft_strsub.c		\
 		ft_strjoin.c	\
 		ft_strtrim.c	\
-		#ft_strnequ.c	\
+		ft_strnequ.c	\
 		ft_memccpy.c	\
 
 OBJ =	ft_strlen.o		\
@@ -102,7 +102,7 @@ OBJ =	ft_strlen.o		\
 		ft_strsub.o		\
 		ft_strjoin.o	\
 		ft_strtrim.o	\
-		#ft_strnequ.o	\
+		ft_strnequ.o	\
 		ft_memccpy.o	\
 
 all:

@@ -6,7 +6,7 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 10:57:09 by nselaule          #+#    #+#             */
-/*   Updated: 2018/06/02 09:36:23 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/05 12:19:51 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@ void	ft_bzero(void *s, size_t n)
 	char		*str;
 
 	str = (char*)s;
-/*	if (n == 0 || s == NULL)
-		return ;*/
 	while (n > 0)
 	{
 		str[n] = 0;
 		n--;
 	}
-//	str[n] = 0;
+	str[n] = 0;
 }

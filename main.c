@@ -6,16 +6,16 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 17:04:32 by nselaule          #+#    #+#             */
-/*   Updated: 2018/06/04 10:43:04 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/05 15:01:50 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int		main(int c, char **v)
+int		main()
 {
-	(void)c;
-	printf("%s", ft_strtrim(v[1]));
+	char *str = "	\n	My name is	\n";
+	printf("%s", ft_strtrim(str));
 	return (0);
 }

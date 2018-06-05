@@ -6,7 +6,7 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 10:55:37 by nselaule          #+#    #+#             */
-/*   Updated: 2018/06/04 17:19:03 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/05 16:25:15 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ char	*ft_strdup(char *str);
 int		ft_strlen(const char *str);
 void	*ft_memset(void *b, int c, size_t len);
 void    *ft_memcpy(void *dst, const void *src, size_t n);
+void    *ft_memccpy(void *dst, const void *src, int c, size_t n);
 void    ft_bzero(void *s, size_t n);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
