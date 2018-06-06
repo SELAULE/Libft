@@ -6,7 +6,7 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:35:58 by nselaule          #+#    #+#             */
-/*   Updated: 2018/06/05 15:28:30 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/06 17:31:47 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 				ptr = ((char*)&needle[j]);
 				return (ptr);
 			}
-			else
-				return (ptr);
+			//else
+			//	return (ptr++);
 			j++;
 		}
 		i++;

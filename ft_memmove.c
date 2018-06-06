@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 11:47:21 by nselaule          #+#    #+#             */
-/*   Updated: 2018/06/06 12:28:31 by nselaule         ###   ########.fr       */
+/*   Created: 2018/06/06 13:22:37 by nselaule          #+#    #+#             */
+/*   Updated: 2018/06/06 17:33:00 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*dest;
 	unsigned char	*str;
-	size_t			i;
+	unsigned char	*dest;
+	size_t				i;
+	size_t		j;
 
 	i = 0;
-	dest = (unsigned char*)dst;
+	j = len;
 	str = (unsigned char*)src;
-	while (i < n)
+	dest = (unsigned char*)dst;
+	if (str < dest)
+		return (dest);
+	while (i < len)
 	{
 		dest[i] = str[i];
-		if ((unsigned char)c == str[i])
-		return (dest + i + 1);
 		i++;
 	}
-	return (NULL);
+	return (dest);
 }

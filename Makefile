@@ -6,7 +6,7 @@
 #    By: nselaule <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/28 09:44:43 by nselaule          #+#    #+#              #
-#    Updated: 2018/06/05 16:17:55 by nselaule         ###   ########.fr        #
+#    Updated: 2018/06/06 16:44:44 by nselaule         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC =	ft_strlen.c		\
 		ft_strcpy.c		\
 		ft_strncpy.c	\
 		ft_strstr.c		\
+		ft_strchr.c		\
 		ft_memalloc.c	\
 		ft_putchar_fd.c	\
 		ft_memdel.c		\
@@ -60,6 +61,9 @@ SRC =	ft_strlen.c		\
 		ft_strtrim.c	\
 		ft_strnequ.c	\
 		ft_memccpy.c	\
+		ft_memmove.c	\
+		ft_memchr.c		\
+		ft_memcmp.c		\
 
 OBJ =	ft_strlen.o		\
 		ft_memset.o		\
@@ -79,6 +83,7 @@ OBJ =	ft_strlen.o		\
 		ft_strcpy.o		\
 		ft_strncpy.o	\
 		ft_strstr.o		\
+		ft_strchr.o		\
 		ft_memalloc.o	\
 		ft_memdel.o		\
 		ft_putendl.o	\
@@ -104,6 +109,9 @@ OBJ =	ft_strlen.o		\
 		ft_strtrim.o	\
 		ft_strnequ.o	\
 		ft_memccpy.o	\
+		ft_memmove.o	\
+		ft_memchr.o		\
+		ft_memcmp.o		\
 
 all:
 	gcc -c $(FLAGS) $(SRC)
