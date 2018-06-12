@@ -6,7 +6,7 @@
 #    By: nselaule <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/28 09:44:43 by nselaule          #+#    #+#              #
-#    Updated: 2018/06/06 16:44:44 by nselaule         ###   ########.fr        #
+#    Updated: 2018/06/12 17:11:27 by nselaule         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,10 @@ SRC =	ft_strlen.c		\
 		ft_strcpy.c		\
 		ft_strncpy.c	\
 		ft_strstr.c		\
+		ft_strnstr.c	\
 		ft_strchr.c		\
 		ft_memalloc.c	\
+		ft_strrchr.c	\
 		ft_putchar_fd.c	\
 		ft_memdel.c		\
 		ft_putendl.c	\
@@ -64,6 +66,10 @@ SRC =	ft_strlen.c		\
 		ft_memmove.c	\
 		ft_memchr.c		\
 		ft_memcmp.c		\
+		ft_strlcat.c	\
+		ft_itoa.c		\
+		ft_strsplit.c	\
+		ft_lstnew.c		
 
 OBJ =	ft_strlen.o		\
 		ft_memset.o		\
@@ -83,7 +89,9 @@ OBJ =	ft_strlen.o		\
 		ft_strcpy.o		\
 		ft_strncpy.o	\
 		ft_strstr.o		\
+		ft_strnstr.o	\
 		ft_strchr.o		\
+		ft_strrchr.o	\
 		ft_memalloc.o	\
 		ft_memdel.o		\
 		ft_putendl.o	\
@@ -112,6 +120,10 @@ OBJ =	ft_strlen.o		\
 		ft_memmove.o	\
 		ft_memchr.o		\
 		ft_memcmp.o		\
+		ft_strlcat.o	\
+		ft_itoa.o		\
+		ft_strsplit.o	\
+		ft_lstnew.o		
 
 all:
 	gcc -c $(FLAGS) $(SRC)

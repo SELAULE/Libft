@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/28 17:04:32 by nselaule          #+#    #+#             */
-/*   Updated: 2018/06/05 15:01:50 by nselaule         ###   ########.fr       */
+/*   Created: 2018/06/11 11:44:54 by nselaule          #+#    #+#             */
+/*   Updated: 2018/06/12 14:26:28 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int		main()
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	char *str = "	\n	My name is	\n";
-	printf("%s", ft_strtrim(str));
-	return (0);
+	t_list	*fresh;
+
+	fresh = (t_list *)malloc(sizeof(t_list));
+	if (!fresh)
+		return (NULL);
+	fresh->content = (void *)malloc(content_size);
+	if (!content || !fresh->content)
+	{
+		fresh->content = NULL;
+		fresh->content_size = 0;
+		return (fresh);
+	}
+	fresh->content = ft_memcpy(fresh->content, content, content_size);
+	fresh->content_size = content_size;
+	return (fresh);
 }
