@@ -6,43 +6,57 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 15:04:14 by nselaule          #+#    #+#             */
-/*   Updated: 2018/06/12 15:42:18 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/14 15:27:55 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+int		ft_isspace(int c)
 {
-	int		i;
-	int		j;
-	int		k;
-	int		f;
-	char	*fresh;
+	if (c == ' ' || c == '\t' || c == '\n' || c == '\r')
+		return (1);
+	return (0);
+}
+
+char	*my_strncpy(char *dst, const char *src, size_t len, size_t start)
+{
+	size_t		i;
 
 	i = 0;
-	f = 0;
+	while (src[start] != '\0' && i < len)
+	{
+		dst[i] = src[start];
+		start++;
+		i++;
+	}
+	while (dst[i])
+		dst[i++] = '\0';
+	return (dst);
+}
+
+char	*ft_strtrim(char const *s)
+{
+	char	*new;
+	int		len;
+	int		i;
+
+	i = 0;
+	new = NULL;
+	len = ft_strlen(s);
 	if (!s)
 		return (0);
-	while (((s[i] == ' ') || (s[i] == '\t') || (s[i] == '\n')) && (s[i] != '\0'))
+	while (ft_isspace(s[i]) && s)
 		i++;
-	if (s[i] == '\0')
+	while (ft_isspace(s[len - 1]) && len)
+		len--;
+	if (len == 0 || ft_strlen(s) == 0)
 	{
-	fresh = ft_strnew(1);
-		return (fresh);
+		new = "";
+		return (new);
 	}
-	j = ft_strlen((char*)s);
-	while ((s[j] == ' ') || (s[j] == '\t') || (s[j] == '\n') || (s[j] == '\0'))
-		j--;
-	k = (j - i + 1);
-	if (!(fresh = ft_strnew(k)))
-		return (0);
-	while (i <= j && s[i] != '\0')
-	{
-		fresh[f] = s[i];
-		i++;
-		f++;
-	}
-	fresh[f] = '\0';
-	return (fresh);
+	if (!(new = ft_strnew((size_t)(len - i))))
+		return (NULL);
+	new = my_strncpy(new, s, (len - i), (size_t)i);
+	return (new);
 }

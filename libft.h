@@ -6,14 +6,14 @@
 /*   By: nselaule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 10:55:37 by nselaule          #+#    #+#             */
-/*   Updated: 2018/06/13 16:58:42 by nselaule         ###   ########.fr       */
+/*   Updated: 2018/06/14 15:17:42 by nselaule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _LIBFT_H_
-#define _LIBFT_H_
-#include <stdlib.h>
-#include <unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct		s_list
 {
@@ -50,7 +50,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 char				*ft_strcpy(char *dst, const char *src);
-char				*ft_strncpy(char *dst, char *src, size_t len);
+char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);

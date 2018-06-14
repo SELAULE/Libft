@@ -6,7 +6,7 @@
 #    By: nselaule <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/28 09:44:43 by nselaule          #+#    #+#              #
-#    Updated: 2018/06/12 17:11:27 by nselaule         ###   ########.fr        #
+#    Updated: 2018/06/14 15:23:18 by nselaule         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -125,7 +125,8 @@ OBJ =	ft_strlen.o		\
 		ft_strsplit.o	\
 		ft_lstnew.o		
 
-all:
+all: $(NAME)
+$(NAME):
 	gcc -c $(FLAGS) $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
